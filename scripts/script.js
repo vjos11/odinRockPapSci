@@ -1,13 +1,25 @@
-let rockPS = {1 : "Rock", 2 : "Paper", 3 : "Scissors"};
-let computerMove;
-// computer move
-let move = Math.random();
-if (move <= 1 / 3) {
-  computerMove = rockPS[1];
-} else if ( move <= 2 / 3) {
-    computerMove = rockPS[2];
-} else {
-    computerMove = rockPS[3];
+let RPS = {1 : "Rock", 2 : "Paper", 3 : "Scissors"};
+
+function computerMove(a) {
+  let move = Math.random();
+  if (move <= 0.33) {
+    move = 1;
+  } else if (move <= 0.66) {
+    move = 2;
+  } else {
+    move = 3;
+  }
+  return ropasc[move];
 }
-console.log(Math.random());
-console.log(computerMove);
+
+function playerMove(a) {
+  function ifIsInArray(b) {
+    if (["ROCK", "PAPER", "SCISSORS"].includes(b.toUpperCase())) {
+      return b;
+    } else return playerMove(a);
+  }
+
+  let move = prompt("Input your move(rock, paper or scissors)...>");
+  return ifIsInArray(move);  
+}
+console.log(playerMove(RPS));
