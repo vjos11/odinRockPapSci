@@ -20,5 +20,12 @@ result.
 5. Get players input
 6. Make players input case insensitive and return players choice
 7. If players input dont match any element in `rps` ask him to choose again.
+
+8. create function game
+9. while loop will run 5 rounds of rock pap. sci.
+10. create if else block to evaluate winner
+11. game will keep score
+12. if any player get 3 wins before 5th round game will end
+13. display result and ask player to play again
 ```
 
