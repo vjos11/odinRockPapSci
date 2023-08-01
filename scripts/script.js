@@ -64,5 +64,12 @@ function game() {
     }
     console.log(result, `\nPlayer ${playerWins} - Computer ${computerWins}`);
   }
+  if (playerWins > computerWins) {
+    console.log(`Player wins ${playerWins}-${computerWins}`);
+  } else if (playerWins < computerWins) {
+    console.log(`Computer wins ${computerWins}-${playerWins}`);
+  } else {
+    console.log(`Draw ${playerWins}-${computerWins}`);
+  }
 }
 game();
